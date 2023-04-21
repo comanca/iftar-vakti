@@ -1,0 +1,23 @@
+header #nav-profile{
+    display: none;
+}
+header nav{
+    justify-content: center;
+
+}
+.div11{
+    display: none;
+}
+#HataEkran{
+    display: block;
+    text-decoration: none;  
+    background-color: #000;
+    border: 0.15rem solid #80558c;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 15px;
+    font-weight: 800;
+    padding: 5px;
+    text-align: center;
+
+}

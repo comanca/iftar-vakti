@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saat</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" media="(max-width:310px)" href="littelmobil.css">
+    <link rel="stylesheet" media="(max-width:540px)" href="mobil.css">
+    <link rel="stylesheet" media="(max-width:900px)" href="tablet.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css "
+  />
+</head>
+<body class="body">
+    <header class="bg-dark">
+        <nav>
+          <a href="#">Com<span>.</span>Anca</a>
+   
+          <div id="nav-profile" class="bg-dark">
+            <div class="dropdown">
+              <i id="setings" class="fa-solid fa-bars"></i>
+              <div class="dropdown-child">
+                <a href="#" id="Kahramanmaras" >Kahramanmaraş</a>
+                <a href="#" id="Osmaniye" >Osmaniye</a>
+                <a href="#" id="Sanliurfa" >Şanlıurfa</a>
+                <a href="#" id="Kilis" >Kilis</a>
+                <a href="#" id="Adana" >Adana</a>
+                <a href="#" id="Diyarbakir" >Diyarbakır</a>
+                <a href="#" id="Adiyaman" >Adıyaman</a>
+                <a href="#" id="Hatay" >Hatay</a>
+                <a href="#" id="Malatya" >Malatya</a>
+                <a href="#" id="Elazig" >Elazığ</a>
+                <a href="#" id="Gaziantep" >Gaziantep</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+        <div class="div1">
+          <a id="HataEkran">Sistem İçin Ekran Boyutu Kurtarmıyor</a>
+            <div class="div11">
+
+                    <div class="div111">
+                        <label for="text" class="saat_Obj" id="saat">--</label>
+                        <label for="text" class="saat_Obj" id="dakika">--</label>
+                        <label for="text" class="saat_Obj" id="saniye">--</label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <label for="text" id="tarih">--/--/--</label>
+                    <br><br><br>
+                    
+            </div>
+        </div>
+    <script>
+        const takvim        = ["26 03 2023","27 03 2023","28 03 2023","29 03 2023","30 03 2023","31 03 2023","1 04 2023","2 04 2023","3 04 2023","4 04 2023","5 04 2023","6 04 2023","7 04 2023","8 04 2023","9 04 2023","10 04 2023","11 04 2023","12 04 2023","13 04 2023","14 04 2023","15 04 2023","16 04 2023","17 04 2023","18 04 2023","19 04 2023","20 04 2023"];
+        const Kahramanmaras = ["18:56","18:57","18:58","18:59","19:00","19:01","19:02","19:03","19:03","19:04","19:05","19:06","19:07","19:08","19:09","19:10","19:11","19:12","19:12","19:13","19:14","19:15","19:16","19:17","19:18","19:19",];
+        const Osmaniye      = ["18:59","19:00","19:01","19:01","19:02","19:03","19:04","19:05","19:06","19:07","19:08","19:08","19:09","19:10","19:11","19:12","19:13","19:14","19:15","19:16","19:16","19:17","19:18","19:19","19:20","19:21",];
+        const Sanliurfa     = ["18:49","18:49","18:50","18:51","18:52","18:53","18:54","18:55","18:56","18:57","18:57","18:58","18:59","19:00","19:01","19:02","19:03","19:04","19:05","19:05","19:06","19:07","19:08","19:09","19:10","19:11",];  
+        const Kilis         = ["18:55","18:56","18:57","18:58","18:59","19:00","19:00","19:01","19:02","19:03","19:04","19:05","19:06","19:06","19:07","19:08","19:09","19:10","19:11","19:12","19:13","19:13","19:14","19:15","19:16","19:17",];
+        const Adana         = ["19:02","19:03","19:04","19:05","19:06","19:07","19:08","19:09","19:09","19:10","19:11","19:12","19:13","19:14","19:15","19:16","19:16","19:17","19:18","19:19","19:20","19:21","19:22","19:23","19:24","19:24",];
+        const Diyarbakir    = ["18:43","18:44","18:45","18:46","18:47","18:48","18:49","18:50","18:51","18:51","18:52","18:53","18:54","18:55","18:56","18:57","18:58","18:59","19:00","19:01","19:02","19:02","19:03","19:04","19:05","19:06",];
+        const Adiyaman      = ["18:51","18:52","18:53","18:54","18:54","18:55","18:56","18:57","18:58","18:59","19:00","19:01","19:02","19:03","19:04","19:05","19:05","19:06","19:07","19:08","19:09","19:10","19:11","19:12","19:13","19:14",];
+        const Hatay         = ["18:59","19:00","19:01","19:01","19:02","19:03","19:04","19:05","19:06","19:06","19:07","19:08","19:09","19:10","19:11","19:12","19:12","19:13","19:14","19:15","19:16","19:17","19:17","19:18","19:19","19:20",];
+        const Malatya       = ["18:51","18:52","18:53","18:54","18:55","18:55","18:56","18:57","18:58","18:59","19:00","19:01","19:02","19:03","19:04","19:05","19:06","19:07","19:08","19:09","19:10","19:11","19:11","19:12","19:13","19:14",];
+        const Elazig        = ["18:47","18:48","18:49","18:50","18:51","18:52","18:53","18:54","18:55","18:56","18:57","18:58","18:59","19:00","19:01","19:02","19:03","19:04","19:05","19:05","19:06","19:07","19:08","19:09","19:10","19:11",];
+        const Gaziantep     = ["18:54","18:55","18:56","18:57","18:58","18:59","19:00","19:00","19:01","19:02","19:03","19:04","19:05","19:06","19:07","19:07","19:08","19:09","19:10","19:11","19:12","19:13","19:14","19:15","19:15","19:16",];
+        var konum = "none";
+        var beKonum = " ";
+        var tarih_ayarı = false;
+        document.getElementById("Kahramanmaras").onclick = function() {Sehir(Kahramanmaras)};
+        document.getElementById("Osmaniye").onclick = function() {Sehir(Osmaniye)};
+        document.getElementById("Sanliurfa").onclick = function() {Sehir(Sanliurfa)};
+        document.getElementById("Kilis").onclick = function() {Sehir(Kilis)};
+        document.getElementById("Adana").onclick = function() {Sehir(Adana)};
+        document.getElementById("Diyarbakir").onclick = function() {Sehir(Diyarbakir)};
+        document.getElementById("Adiyaman").onclick = function() {Sehir(Adiyaman)};
+        document.getElementById("Hatay").onclick = function() {Sehir(Hatay)};
+        document.getElementById("Malatya").onclick = function() {Sehir(Malatya)};
+        document.getElementById("Elazig").onclick = function() {Sehir(Elazig)};
+        document.getElementById("Gaziantep").onclick = function() {Sehir(Gaziantep)};
+        var durum = false;
+        var durum2 = false;
+        function Sehir(sehir){
+          beKonum = " ";
+          konum = sehir
+        } 
+        function GetTime(){
+          var now = new Date();
+          var hour = now.getHours();
+          var minute = now.getMinutes();
+          var second = now.getSeconds();
+          var day = now.getDate();
+          var month = now.getMonth()+1;
+          var year = now.getFullYear();
+          if(konum != "none"){
+            if(beKonum != konum){
+              beKonum = konum;
+              for(var i = 0 ; i < takvim.length; i++){
+                var tarihler = takvim[i].split(" ");
+                var gun = tarihler[0];
+                var ay = tarihler[1];
+                var yil = tarihler[2];
+                if(gun == day && ay == month && yil == year ){
+                  durum = true;
+                  var tarih = i;
+                  break;
+                }
+              }
+              if(durum == false){
+                konum = "none";
+                alert("Tarihe Kayıtlı İftar Bulunamadı.")
+                GetTime()
+              }
+            }
+            second = 59 - second;
+            if(durum == true ){
+              var iftar_saati = konum[tarih];
+              iftar_saati = iftar_saati.split(":");
+              var saat = parseInt(iftar_saati[0]);
+              var dakika = parseInt(iftar_saati[1]) - 1;
+              if(saat < hour ||saat == hour && dakika < minute ){
+                  console.log("diğer gün")
+                  iftar_saati = konum[tarih+1];
+                  iftar_saati = iftar_saati.split(":");
+                  saat = parseInt(iftar_saati[0]);
+                  dakika = parseInt(iftar_saati[1]) - 1;
+                  saat = 24 - hour + saat;
+                  
+                } 
+                else{
+                  saat = saat - hour;
+                }
+                if(dakika < minute){
+                  dakika = 60 - minute + dakika;
+                  saat = saat - 1;
+                }
+                else{
+                  dakika = dakika - minute;
+                }
+              durum = false;
+              tarih_ayarı=true;
+            }
+            if(tarih_ayarı == false){
+              var dakika = parseInt(document.getElementById("dakika").textContent);
+              var saat = parseInt(document.getElementById("saat").textContent);
+            }
+            if(second == 59){
+              dakika = dakika - 1;
+
+            }
+            if(dakika == -1 && saat != 0){
+              dakika = 59;
+              saat = saat - 1;
+            }
+            if(saat == 0 && dakika == 0 && second == 0){
+              alert("Ezan Okunuyor");
+              konum = "none";
+            }
+            minute  = dakika;
+            hour    = saat;
+
+            
+
+          }
+            
+            (hour<10)? document.getElementById("saat").innerText="0"+hour :
+            document.getElementById("saat").innerText=hour;
+            (minute<10)? document.getElementById("dakika").innerText="0"+minute :
+            document.getElementById("dakika").innerText=minute;
+            (second<10)? document.getElementById("saniye").innerText="0"+second :
+            document.getElementById("saniye").innerText=second;
+          
+          if(day<10){
+            day = "0"+day;
+          }
+          if(month<10){
+            month = "0"+month;
+          }
+          tarih_ayarı=false;
+          document.getElementById("tarih").innerText=day+"/"+month+"/"+year;
+      
+      }
+    
+
+      setInterval(function(){GetTime();},1000);
+
+
+    </script>
+    
+  </body>
+</html>

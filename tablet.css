@@ -1,0 +1,37 @@
+
+#Kahramanmaras{
+    float: left;
+}
+#Osmaniye{
+    float: left;
+}
+#Sanliurfa{
+    float: left;
+}
+#Kilis{
+    float: left;
+}
+#Adana{
+    float: left;
+}
+#Diyarbakir{
+    float: left;
+}
+#Adiyaman{
+    float: left;
+}
+#Hatay{
+    float: left;
+}
+#Malatya{
+    float: left;
+}
+#Elazig{
+    float: left;
+}
+#Gaziantep{
+    float: left;
+}
+.dropdown{
+    max-width: 400px;
+}
